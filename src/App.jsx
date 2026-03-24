@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Sidebar from "./components/sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Messages from "./pages/Messages";
@@ -10,20 +9,20 @@ import Projects from "./pages/projects";
 import Team from "./pages/Team";
 import Task from "./pages/Task";
 import Setting from "./pages/Setting";
-import { LogOut } from "lucide-react";
+import Sidebar from "./components/sidebar";
 
 function App() {
- const [isOpen, setIsOpen] = useState(() => {
-  const saved = localStorage.getItem("sidebar");
-  return saved ? JSON.parse(saved) : true; 
-});
-
-const toggleSidebar = () => {
-  setIsOpen((prev) => {
-    localStorage.setItem("sidebar", JSON.stringify(!prev));
-    return !prev;
+  const [isOpen, setIsOpen] = useState(() => {
+    const saved = localStorage.getItem("sidebar");
+    return saved ? JSON.parse(saved) : true;
   });
-};
+
+  const toggleSidebar = () => {
+    setIsOpen((prev) => {
+      localStorage.setItem("sidebar", JSON.stringify(!prev));
+      return !prev;
+    });
+  };
   const [users, setUsers] = useState(() => {
     const savedUsers = localStorage.getItem("users");
     return savedUsers ? JSON.parse(savedUsers) : [];
@@ -52,7 +51,7 @@ const toggleSidebar = () => {
                 <Route path="/team" element={<Team />} />
                 <Route path="/tasks" element={<Task />} />
                 <Route path="/settings" element={<Setting />} />
-              </Routes>  
+              </Routes>
             </main>
           </div>
         </div>

@@ -326,7 +326,7 @@ const Dashboard = ({ users, setUsers }) => {
           {/* Line Chart */}
           <div className="bg-white  p-6 rounded-lg shadow">
             <h2 className="flex gap-4 text-sm font-semibold mb-4 items-center "> <BarChart3 size={18} />User Growth</h2>
-            <div className="w-full h-[300px]">
+            <div className="w-full h-72">
               <ResponsiveContainer>
                 <LineChart data={data}>
                   <CartesianGrid strokeDasharray="3 3" />
@@ -344,7 +344,7 @@ const Dashboard = ({ users, setUsers }) => {
               Messages Overview
             </h2>
 
-            <div className="w-full h-[300px]">
+            <div className="w-full h-72">
               <ResponsiveContainer>
                 <BarChart data={data}>
                   <CartesianGrid strokeDasharray="3 3" />
