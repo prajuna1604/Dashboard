@@ -10,6 +10,7 @@ import Projects from "./pages/projects";
 import Team from "./pages/Team";
 import Task from "./pages/Task";
 import Setting from "./pages/Setting";
+import { LogOut } from "lucide-react";
 
 function App() {
  const [isOpen, setIsOpen] = useState(() => {

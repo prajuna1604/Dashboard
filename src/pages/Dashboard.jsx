@@ -90,10 +90,10 @@ const Dashboard = ({ users, setUsers }) => {
     setShowModal(true);
   };
   const SOURCE_DATA = [
-    { source: "Organic", users: 4000, color: "#3B82F6" },
-    { source: "Direct", users: 3000, color: "#10B981" },
-    { source: "Social", users: 2000, color: "#F97316" },
-    { source: "Ads", users: 1500, color: "#EAB308" },
+    { source: "Organic", users: 40, color: "#3B82F6" },
+    { source: "Direct", users: 30, color: "#10B981" },
+    { source: "Social", users: 20, color: "#F97316" },
+    { source: "Ads", users: 15, color: "#EAB308" },
   ];
   function DonutChart({ data }) {
     const [hovered, setHovered] = useState(null);
@@ -215,9 +215,9 @@ const Dashboard = ({ users, setUsers }) => {
               </thead>
               <tbody>
                 {[
-                  { source: "Facebook Ads", users: "26,345", conversion: "10.2%" },
-                  { source: "Google Ads", users: "21,341", conversion: "11.7%" },
-                  { source: "Instagram Ads", users: "34,379", conversion: "12.4%" },
+                  { source: "Facebook Ads", users: "234", conversion: "10.2%" },
+                  { source: "Google Ads", users: "234", conversion: "11.7%" },
+                  { source: "Instagram Ads", users: "343", conversion: "12.4%" },
                   //   { source: "Affiliates", users: "12,359", conversion: "20.9%" },
                   //   { source: "Organic", users: "10,345", conversion: "10.3%" },
                 ].map((item, index) => (
